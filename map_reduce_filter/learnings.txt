@@ -1,0 +1,56 @@
+
+Map : Map function is used to transform an array.
+
+Trnasformation means suppose you have transform each and every value in an array and get a new array out of it.
+
+syntax:
+
+let say you have an array
+
+const arr = [5,2,3,4,5]
+
+//map is a higher order function, so whatever the function which you pass inside the map will be applied to all 
+//the elements of the array and returns an array
+
+function double(x){
+    return x**2;
+}
+
+const output = arr.map(double)
+
+----------------------------------------------------------------------------------------------------------------
+
+Filter : filter is used to filter an array!, let say suppose you have to filter all the number greater than 5 you 
+use filter. in callback function we have to use return type which is bollean if it true the element will be put in 
+an return array from filter function or else no.
+
+const output = arr.filter((x) => x>3)
+
+----------------------------------------------------------------------------------------------------------------
+
+Reduce : Reduce is used to perform a operation on all the elements of the array and return a single value out of it
+
+reduce function takes two arguments first is the callback function, and callback takes two arguments first is accumaltor and
+second is current, the accumaltor collects the value and current is the current value the function is iterating through.
+second argument for the reduce function is value of accumaltor.
+
+eg:
+
+Remember : the function will be called on each value of the array
+
+const arr = [1,2,3,4]
+
+arr.reduce(function (acc, cur) {
+    acc = acc + cur;
+    return acc;
+}, 0)
+
+//finding larges element
+
+arr.reduce((acc,cur) => {
+   
+    if (cur > acc){
+        acc = cur  ;
+    };
+    return max;
+}, 0)
