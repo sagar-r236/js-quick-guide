@@ -12,7 +12,7 @@ const arr = [5,2,3,4,5]
 //map is a higher order function, so whatever the function which you pass inside the map will be applied to all 
 //the elements of the array and returns an array
 
-function double(x){
+function double(x){ //passing each element of the array as x
     return x**2;
 }
 
