@@ -1,0 +1,30 @@
+Spread operator: Spread operator is an operator which spreads an iterable. 
+
+let say you have an array a = [1,2,3] and you have an another array b = [4,5,6]
+if in the b array if you do b = [4, 5, 6, ...a] then the array b will become b = [4,5,6,1,2,3]
+
+also can be used to pass to the function:
+
+let say we have function:
+
+function add(a,b,c) {
+    return a+b+c;
+}
+
+const a = [1,2,3,4]
+
+const result = add(...a) //Here we are calling add function and using spread operator to pass the arguement. This will pass 1,2,3
+                        // as function is taking only 3 arguement and ignores the 4.
+
+
+
+rest operator:
+
+Rest operator is the opposite of spread, it's like variable number of arguement of funciton in python, it condences a number of argument to an array
+
+
+function add(...args) { //rest operator acting like variable number of arguement
+    args.map((ele) {
+        return ele + 1;
+    })
+}
